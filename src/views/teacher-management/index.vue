@@ -240,7 +240,7 @@ export default {
         .then(res => {
           const { data } = res
           const { filename } = data
-          window.open('http://124.221.61.179:10010/file/download?filename=' + filename)
+          window.open('http://localhost:10010/file/download?filename=' + filename)
         }).then(res => {
           this.$message({
             message: '下载成功',

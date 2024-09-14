@@ -257,7 +257,7 @@ export default {
       getDemoPath()
         .then(res => {
           const { data } = res
-          window.open('http://124.221.61.179:10010/file/download?filename=' + data)
+          window.open('http://localhost:10010/file/download?filename=' + data)
         }).then(res => {
           this.$message({
             message: '下载成功',

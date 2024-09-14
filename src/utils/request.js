@@ -5,7 +5,9 @@ import { getToken } from '@/utils/auth'
 
 // create an axios instance
 const service = axios.create({
-  baseURL: 'http://124.221.61.179:10010', // url = base url + request url
+  // baseURL: 'http://124.221.61.179:10010',
+  // url = base url + request url
+  baseURL: 'http://localhost:10010', // 本地部署
   // baseURL: 'https://mock.presstime.cn/mock/65a19c49b02591272cbf33d7/collage-cms/',
   // withCredentials: true, // send cookies when cross-domain requests
   timeout: 50000 // request timeout

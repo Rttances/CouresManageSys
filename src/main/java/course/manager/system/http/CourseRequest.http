@@ -1,0 +1,445 @@
+### Excel 解析课程信息
+GET http://127.0.0.1:10010/course/import?
+    filename=/Users/liweitang/IdeaProjects/course-manager-system/file/temp/course-excel-demo.xlsx
+
+### 批量导入课程信息
+POST http://127.0.0.1:10010/course/batch/create/excel
+Content-Type: application/json
+
+[
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "1",
+    "courseName": "编译原理",
+    "score": 3,
+    "totalClassHour": 48,
+    "theoreticalClassHour": 48,
+    "experimentalClassHour": null,
+    "weekClassHour": "3-0",
+    "weekNumber": "1-16",
+    "belongSystem": "科学"
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "2",
+    "courseName": "软件工程",
+    "score": 3,
+    "totalClassHour": 64,
+    "theoreticalClassHour": 48,
+    "experimentalClassHour": 16,
+    "weekClassHour": "3-1",
+    "weekNumber": "1-16",
+    "belongSystem": "软件"
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "3",
+    "courseName": "机器人与教育",
+    "score": 1,
+    "totalClassHour": 32,
+    "theoreticalClassHour": 16,
+    "experimentalClassHour": 16,
+    "weekClassHour": "1-1",
+    "weekNumber": "1-16",
+    "belongSystem": "应用"
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "4",
+    "courseName": "互联网原理与应用",
+    "score": 3,
+    "totalClassHour": 48,
+    "theoreticalClassHour": 48,
+    "experimentalClassHour": null,
+    "weekClassHour": "3-0",
+    "weekNumber": "1-16",
+    "belongSystem": "网络"
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "5",
+    "courseName": "数值计算方法",
+    "score": 3,
+    "totalClassHour": 48,
+    "theoreticalClassHour": 48,
+    "experimentalClassHour": null,
+    "weekClassHour": "3-0",
+    "weekNumber": "1-16",
+    "belongSystem": "科学"
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "10",
+    "courseName": "Linux操作系统与应用",
+    "score": 2,
+    "totalClassHour": 48,
+    "theoreticalClassHour": 16,
+    "experimentalClassHour": 32,
+    "weekClassHour": "1-2",
+    "weekNumber": "1-16",
+    "belongSystem": "科学"
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "11",
+    "courseName": "汇编语言与接口技术",
+    "score": 3,
+    "totalClassHour": 64,
+    "theoreticalClassHour": 48,
+    "experimentalClassHour": 16,
+    "weekClassHour": "3-1",
+    "weekNumber": "1-16",
+    "belongSystem": "应用"
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "12",
+    "courseName": "大数据处理技术与应用",
+    "score": 2,
+    "totalClassHour": 48,
+    "theoreticalClassHour": 32,
+    "experimentalClassHour": 16,
+    "weekClassHour": "2-1",
+    "weekNumber": "1-16",
+    "belongSystem": "软件"
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "13",
+    "courseName": "数据挖掘",
+    "score": 3,
+    "totalClassHour": 64,
+    "theoreticalClassHour": 48,
+    "experimentalClassHour": 16,
+    "weekClassHour": "3-1",
+    "weekNumber": "1-16",
+    "belongSystem": "软件"
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "14",
+    "courseName": "自然语言处理",
+    "score": 3,
+    "totalClassHour": 48,
+    "theoreticalClassHour": 48,
+    "experimentalClassHour": null,
+    "weekClassHour": "3-0",
+    "weekNumber": "1-16",
+    "belongSystem": "软件"
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "15",
+    "courseName": "计算机图形学及应用",
+    "score": 3,
+    "totalClassHour": 48,
+    "theoreticalClassHour": 48,
+    "experimentalClassHour": null,
+    "weekClassHour": "3-0",
+    "weekNumber": "1-16",
+    "belongSystem": "科学"
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "16",
+    "courseName": "单片机原理及应用",
+    "score": 3,
+    "totalClassHour": 48,
+    "theoreticalClassHour": 48,
+    "experimentalClassHour": null,
+    "weekClassHour": "3-0",
+    "weekNumber": "1-16",
+    "belongSystem": "应用"
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "17",
+    "courseName": "单片机原理及应用实验项目",
+    "score": 1,
+    "totalClassHour": 16,
+    "theoreticalClassHour": null,
+    "experimentalClassHour": 16,
+    "weekClassHour": "1-0",
+    "weekNumber": "1-16",
+    "belongSystem": "应用"
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "18",
+    "courseName": "计算理论导引",
+    "score": 2,
+    "totalClassHour": 32,
+    "theoreticalClassHour": 32,
+    "experimentalClassHour": null,
+    "weekClassHour": "2-0",
+    "weekNumber": "1-16",
+    "belongSystem": "科学"
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "19",
+    "courseName": "嵌入式软件设计",
+    "score": 2,
+    "totalClassHour": 48,
+    "theoreticalClassHour": 32,
+    "experimentalClassHour": 16,
+    "weekClassHour": "2-1",
+    "weekNumber": "1-16",
+    "belongSystem": "应用"
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "20",
+    "courseName": "数字图像处理基础",
+    "score": 2,
+    "totalClassHour": 48,
+    "theoreticalClassHour": 32,
+    "experimentalClassHour": 16,
+    "weekClassHour": "2-1",
+    "weekNumber": "1-16",
+    "belongSystem": "应用"
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "21",
+    "courseName": "平面动画2D",
+    "score": 2,
+    "totalClassHour": 48,
+    "theoreticalClassHour": 32,
+    "experimentalClassHour": 16,
+    "weekClassHour": "2-1",
+    "weekNumber": "1-16",
+    "belongSystem": "应用"
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "22",
+    "courseName": "数据库系统实现",
+    "score": 2,
+    "totalClassHour": 48,
+    "theoreticalClassHour": 32,
+    "experimentalClassHour": 16,
+    "weekClassHour": "2-1",
+    "weekNumber": "1-16",
+    "belongSystem": "软件"
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "23",
+    "courseName": "程序设计方法与艺术",
+    "score": 2,
+    "totalClassHour": 48,
+    "theoreticalClassHour": 32,
+    "experimentalClassHour": 16,
+    "weekClassHour": "2-1",
+    "weekNumber": "1-16",
+    "belongSystem": "软件"
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "24",
+    "courseName": "分布式系统",
+    "score": 2,
+    "totalClassHour": 48,
+    "theoreticalClassHour": 32,
+    "experimentalClassHour": 16,
+    "weekClassHour": "2-1",
+    "weekNumber": "1-16",
+    "belongSystem": null
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "25",
+    "courseName": "RFID原理及应用",
+    "score": 2,
+    "totalClassHour": 32,
+    "theoreticalClassHour": 32,
+    "experimentalClassHour": null,
+    "weekClassHour": "2-0",
+    "weekNumber": "1-16",
+    "belongSystem": null
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "26",
+    "courseName": "机器人基础",
+    "score": 3,
+    "totalClassHour": 64,
+    "theoreticalClassHour": 32,
+    "experimentalClassHour": 32,
+    "weekClassHour": "2-2",
+    "weekNumber": "1-16",
+    "belongSystem": "软件"
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "27",
+    "courseName": "嵌入式系统课程项目",
+    "score": 1,
+    "totalClassHour": 2,
+    "theoreticalClassHour": null,
+    "experimentalClassHour": null,
+    "weekClassHour": "2-0",
+    "weekNumber": "1-16",
+    "belongSystem": "应用"
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "28",
+    "courseName": "大型数据库技术及应用",
+    "score": 3,
+    "totalClassHour": 64,
+    "theoreticalClassHour": 48,
+    "experimentalClassHour": 16,
+    "weekClassHour": "3-1",
+    "weekNumber": "1-16",
+    "belongSystem": "软件"
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "29",
+    "courseName": "操作系统课程项目",
+    "score": 1,
+    "totalClassHour": 2,
+    "theoreticalClassHour": null,
+    "experimentalClassHour": null,
+    "weekClassHour": "2-0",
+    "weekNumber": "1-16",
+    "belongSystem": "科学"
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "31",
+    "courseName": "软件测试",
+    "score": 2,
+    "totalClassHour": 48,
+    "theoreticalClassHour": 32,
+    "experimentalClassHour": 16,
+    "weekClassHour": "2-1",
+    "weekNumber": "1-16",
+    "belongSystem": "应用"
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "32",
+    "courseName": "软件开发框架高级实践",
+    "score": 2,
+    "totalClassHour": 48,
+    "theoreticalClassHour": 16,
+    "experimentalClassHour": 32,
+    "weekClassHour": "1-2",
+    "weekNumber": "1-16",
+    "belongSystem": "软件"
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "33",
+    "courseName": "中级软件设计实作",
+    "score": 1,
+    "totalClassHour": 2,
+    "theoreticalClassHour": null,
+    "experimentalClassHour": null,
+    "weekClassHour": "2-0",
+    "weekNumber": "1-16",
+    "belongSystem": "软件"
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "34",
+    "courseName": "计算智能方法",
+    "score": 3,
+    "totalClassHour": 48,
+    "theoreticalClassHour": 48,
+    "experimentalClassHour": null,
+    "weekClassHour": "3-0",
+    "weekNumber": "1-16",
+    "belongSystem": null
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "35",
+    "courseName": "数据库系统课程项目",
+    "score": 1,
+    "totalClassHour": 2,
+    "theoreticalClassHour": null,
+    "experimentalClassHour": null,
+    "weekClassHour": "2-0",
+    "weekNumber": "1-16",
+    "belongSystem": "软件"
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "36",
+    "courseName": "信息技术教学论",
+    "score": 3,
+    "totalClassHour": 48,
+    "theoreticalClassHour": 48,
+    "experimentalClassHour": null,
+    "weekClassHour": "3-0",
+    "weekNumber": "1-16",
+    "belongSystem": "科学"
+  },
+  {
+    "successImport": true,
+    "failedMsg": null,
+    "courseId": "40",
+    "courseName": "机器学习高级技术及应用",
+    "score": 3,
+    "totalClassHour": 64,
+    "theoreticalClassHour": 48,
+    "experimentalClassHour": 16,
+    "weekClassHour": "2-1",
+    "weekNumber": "1-16",
+    "belongSystem": "人工智能"
+  }
+]
+
+### 查询课程信息
+POST http://127.0.0.1:10010/course/page
+Content-Type: application/json
+
+{
+}
+
+### 课程绑定教师
+POST http://127.0.0.1:10010/course/map-teacher
+Content-Type: application/json
+
+{
+  "courseId": "CXK12142",
+  "teacherId": "8"
+}
+
+
+

@@ -1,0 +1,62 @@
+### 获取教师信息 Excel Demo 文件
+GET http://127.0.0.1:10010/teacher/export/demo
+
+### 查询教师信息
+GET http://127.0.0.1:10010/teacher/detail/1
+
+
+### Excel 解析教师信息
+GET http://127.0.0.1:10010/teacher/import?
+    filename=/Users/liweitang/IdeaProjects/course-manager-system/file/temp/teacher-excel-demo.xlsx
+
+### 批量导入教师信息
+POST http://127.0.0.1:10010/teacher/batch/create
+Content-Type: application/json
+
+[
+  {
+    "teacherId": "CXK12134",
+    "teacherName": "查头吹",
+    "teacherLevel": "讲师"
+  },
+  {
+    "teacherId": "CXK12135",
+    "teacherName": "长孙蓉初",
+    "teacherLevel": "讲师"
+  },
+  {
+    "teacherId": "CXK12136",
+    "teacherName": "牛歧",
+    "teacherLevel": "高级教师"
+  },
+  {
+    "teacherId": "CXK12137",
+    "teacherName": "丰啥",
+    "teacherLevel": "高级教师"
+  },
+  {
+    "teacherId": "CXK12138",
+    "teacherName": "乔蔗",
+    "teacherLevel": "高级教师"
+  },
+  {
+    "teacherId": "CXK12139",
+    "teacherName": "暨矗贞",
+    "teacherLevel": "副教授"
+  },
+  {
+    "teacherId": "CXK12140",
+    "teacherName": "计绢",
+    "teacherLevel": "副教授"
+  },
+  {
+    "teacherId": "CXK12141",
+    "teacherName": "郑肮",
+    "teacherLevel": "教授"
+  },
+  {
+    "teacherId": "CXK12142",
+    "teacherName": "路螟",
+    "teacherLevel": "教授"
+  }
+]

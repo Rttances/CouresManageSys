@@ -1,0 +1,34 @@
+### 添加选课志愿
+POST http://127.0.0.1:10010/school-timetable/course-volunteer/create
+Content-Type: application/json
+
+{
+  "schoolTimetableId": 4,
+  "status": 2,
+  "volunteerTime": [
+    {
+      "order": 1,
+      "weekDay": 3,
+      "daySectionStart": 1,
+      "daySectionEnd": 2
+    },
+    {
+      "order": 2,
+      "weekDay": 4,
+      "daySectionStart": 1,
+      "daySectionEnd": 2
+    },
+    {
+      "order": 3,
+      "weekDay": 5,
+      "daySectionStart": 1,
+      "daySectionEnd": 2
+    }
+  ]
+}
+
+### 根据编号查询选课志愿
+GET http://127.0.0.1:10010/school-timetable/course-volunteer/detail?courseVolunteerId=1
+
+### 自动排课
+GET http://127.0.0.1:10010/school-timetable/auto-schedule

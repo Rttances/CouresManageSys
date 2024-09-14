@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="course.manager.system.dao.mapper.TeachClassGroupMapper">
+    <resultMap id="TeachClassGroup" type="course.manager.system.dao.po.TeachClassGroupPO"
+               autoMapping="true">
+        <result property="classIdSet" column="class_id_set"
+                typeHandler="course.manager.system.dao.handler.ListLongTypeHandler"/>
+    </resultMap>
+
+    <select id="searchTeachClassGroup" resultMap="TeachClassGroup">
+        SELECT *
+        FROM teach_class_group
+        WHERE 1
+        <if test="entity.groupName != null and entity.groupName != ''">
+            AND group_name = #{entity.groupName}
+        </if>
+        <if test="entity.classIdSet != null and entity.classIdSet.size != 0">
+            AND JSON_CONTAINS(class_id_set,
+            #{entity.classIdSet, typeHandler=course.manager.system.dao.handler.ListLongTypeHandler})
+        </if>
+    </select>
+</mapper>

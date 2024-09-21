@@ -1,0 +1,84 @@
+### 导出行政班级 Excel 模板
+GET http://127.0.0.1:10010/administrative-class/excel/demo
+
+
+### 解析行政班级 Excel 数据
+GET http://127.0.0.1:10010/administrative-class/import?
+    filename=/Users/liweitang/IdeaProjects/course-manager-system/file/temp/administrative-class-demo.xlsx
+
+### 批量导入行政班级数据
+POST http://127.0.0.1:10010/administrative-class/batch/create
+Content-Type: application/json
+
+[
+  {
+    "className": "1 班",
+    "grade": 2023,
+    "majorName": "软件工程",
+    "directionName": "软件工程",
+    "studentNumber": 30
+  },
+  {
+    "className": "2 班",
+    "grade": 2023,
+    "majorName": "计算机科学与技术",
+    "directionName": "机器人与物联网技术",
+    "studentNumber": 35
+  },
+  {
+    "className": "3 班",
+    "grade": 2023,
+    "majorName": "计算机科学与技术",
+    "directionName": "数据科学与大数据技术",
+    "studentNumber": 35
+  },
+  {
+    "className": "4 班",
+    "grade": 2023,
+    "majorName": "计算机科学与技术",
+    "directionName": "计算机软件技术",
+    "studentNumber": 43
+  },
+  {
+    "className": "5 班",
+    "grade": 2023,
+    "majorName": "计算机科学与技术",
+    "directionName": "人工智能",
+    "studentNumber": 43
+  },
+  {
+    "className": "6 班",
+    "grade": 2023,
+    "majorName": "网络工程",
+    "directionName": "网络空间安全",
+    "studentNumber": 28
+  },
+  {
+    "className": "7 班",
+    "grade": 2023,
+    "majorName": "网络工程",
+    "directionName": "网络技术应用",
+    "studentNumber": 28
+  }
+]
+
+### 根据课程组编号查询信息
+GET http://127.0.0.1:10010/administrative-class/teach-class-group/detail?teachClassGroupId=1
+
+### 条件查询课程组信息
+POST  http://127.0.0.1:10010/administrative-class/teach-class-group/search
+Content-Type: application/json
+
+{}
+
+### 行政班级合并为教学组
+POST http://127.0.0.1:10010/administrative-class/merge
+Content-Type: application/json
+
+{
+  "classIdSet": [
+    2,
+    3
+  ],
+  "groupName": "与第一组交叉 2L 班级"
+}

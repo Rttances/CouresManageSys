@@ -1,0 +1,21 @@
+### 新建用户
+POST http://127.0.0.1:10010/user/create
+Content-Type: application/json
+
+{
+  "username": "黎炜堂",
+  "nickname": "levi"
+}
+
+### 根据 userId 获取用户信息
+GET http://127.0.0.1:10010/user/detail/5
+
+### 用户登录
+POST http://127.0.0.1:10010/user/login
+Content-Type: application/json
+
+{
+  "userId": "admin",
+  "password": "admin",
+  "roleId": 1
+}

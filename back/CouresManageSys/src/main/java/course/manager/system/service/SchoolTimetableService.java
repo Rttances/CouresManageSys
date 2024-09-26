@@ -2,6 +2,7 @@ package course.manager.system.service;
 
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.collection.ListUtil;
+import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.core.util.RandomUtil;
 import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
@@ -185,9 +186,9 @@ public class SchoolTimetableService extends ServiceImpl<SchoolTimetableMapper, S
         if (StrUtil.isNotBlank(schoolTimetableRO.getCourseName())) {
             List<CoursePO> coursePOS = courseMapper.selectList(Wrappers.<CoursePO>lambdaQuery()
                     .like(CoursePO::getCourseName, schoolTimetableRO.getCourseName())
-                    .like(CoursePO::getMajor,schoolTimetableRO.getMajor())
-                    .eq(CoursePO::getGrade,schoolTimetableRO.getGrade())
-                    .eq(CoursePO::getSemester,schoolTimetableRO.getSemester())
+                    .like(StrUtil.isNotBlank(schoolTimetableRO.getMajor()),CoursePO::getMajor,schoolTimetableRO.getMajor())
+                    .eq(ObjectUtil.isNotNull(schoolTimetableRO.getGrade()),CoursePO::getGrade,schoolTimetableRO.getGrade())
+                    .eq(ObjectUtil.isNotNull(schoolTimetableRO.getGrade()),CoursePO::getSemester,schoolTimetableRO.getSemester())
             );
             if (CollUtil.isNotEmpty(coursePOS)) {
                 List<String> courseIdSet = coursePOS.stream()
